@@ -5,6 +5,13 @@ def prime():
             if i % j == 0 :
                 break
         else: res.append(i)
-    print(list(filter(lambda i: i > 0 and i != 1, res)))
-              
+    print(list(filter(lambda i: i > 0 and i != 1, res)))     
 prime()
+
+def fibb(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fibb(10)))
