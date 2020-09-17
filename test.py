@@ -35,7 +35,7 @@ def first():
 def second(): 
     import functools, string, operator
     print('Lenght of the string:',len('На дворе - трава, на траве - дрова, не руби дрова на траве двора!'))
-    print('String with .replace' + 'На дворе - трава, на траве - дрова, не руби дрова на траве двора!'.replace('дрова', 'trash'))
+    print('String with .replace ' + 'На дворе - трава, на траве - дрова, не руби дрова на траве двора!'.replace('дрова', 'trash'))
     f = string.punctuation
     text = 'На дворе - трава, на траве - дрова, не руби дрова на траве двора!'
     print('Punctuation symbols:',len(list(filter(functools.partial(operator.contains, f), text))))
