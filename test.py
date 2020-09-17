@@ -27,7 +27,9 @@ pass
 
 def first():
     f = input('Enter your message here: ')
-    if ('@' and '.ru') in f: print(f) #output test@gmail.ru else: Nothing
+    if '@' in f:
+        if '.ru' in f:
+            print(f) #OUTPUT test@.ru else: nothing
         
         
 def second(): 
