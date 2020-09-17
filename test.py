@@ -16,6 +16,14 @@ def fibb(n):
 
 print(list(fibb(10)))
 
+def square(): 
+    print('Square =',int(input('wide: ')) * int(input('lenght: ')))
+square() 
+'''OUTPUT:  wide: 10
+            lenght: 10
+            Square = 100'''
+pass
+
 
 def first():
     f = input('Enter your message here: ')
