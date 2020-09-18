@@ -44,3 +44,9 @@ second()
     String with .replaceНа дворе - трава, на траве - trash, не руби trash на траве двора!
     Punctuation symbols: 5'''
 pass
+
+import random
+def lists():
+    f = [random.randrange(0,1000) for i in range(100)]
+    print(f'Random {list(filter(lambda i: i % 2 == 0, f))}', f'Min: {min(f)}', f'Max: {max(f)}', f'Sorted: {sorted(f)}', sep = '\n')
+lists()
