@@ -62,7 +62,7 @@ def choose_sort(f):
     print(f, list(reversed(f)), sep = '\n')
 
 def squares(f, start, end): 
-    print(f'Without range(20,26): {list(filter(lambda i: i < start or i > end,f))}')
+    print(f'Without range(20,25): {list(filter(lambda i: i < start or i > end,f))}')
     print(f'Squares: {list(map(lambda x: x*x, f))}')
     
 squares(f, int(input('start range number: ')), (int(input('end range number: '))))
