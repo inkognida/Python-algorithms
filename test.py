@@ -65,6 +65,6 @@ def squares(f, start, end):
     print(f'Without range(20,26): {list(filter(lambda i: i < start or i > end,f))}')
     print(f'Squares: {list(map(lambda x: x*x, f))}')
     
-squares(f, int(input('start range number: ')), (int(input('end range number: '))+1))
+squares(f, int(input('start range number: ')), (int(input('end range number: '))))
 choose_sort(f)
 f = [random.randrange(0,100) for i in range(500)] 
