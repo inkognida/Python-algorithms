@@ -53,18 +53,18 @@ lists()
 
 import random
 def choose_sort(f):  
-    for i in range(len(nums)):
+    for i in range(len(f)):
         low = i
-        for j in range(i + 1, len(nums)):
-            if nums[j] < nums[low]:
+        for j in range(i + 1, len(f)):
+            if f[j] < f[low]:
                 low = j
-        nums[i], nums[low] = nums[low], nums[i]
-    print(nums, list(reversed(nums)), sep = '\n')
+        f[i], f[low] = f[low], f[i]
+    print(f, list(reversed(f)), sep = '\n')
 
-def squares(f): 
-    print(f'Without range(20,26): {list(filter(lambda i: i != 24 and i != 22 and i != 21 and i != 23 and i != 25 and i != 20,f))}')
+def squares(f, start, end): 
+    print(f'Without range(20,26): {list(filter(lambda i: i < start or i > end,f))}')
     print(f'Squares: {list(map(lambda x: x*x, f))}')
     
-squares(f)
+squares(f, int(input('start range number: ')), (int(input('end range number: '))+1))
 choose_sort(f)
 f = [random.randrange(0,100) for i in range(500)] 
