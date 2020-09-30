@@ -68,3 +68,9 @@ def squares(f, start, end):
 squares(f, int(input('start range number: ')), (int(input('end range number: '))))
 choose_sort(f)
 f = [random.randrange(0,100) for i in range(500)] 
+
+import numpy as np 
+def equation():
+    rates = [float(input('Enter first: ')), float(input('Enter second: ')), float(input('Enter third: '))]
+    print(np.roots(rates))
+equation()
