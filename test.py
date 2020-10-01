@@ -74,3 +74,20 @@ def equation():
     rates = [float(input('Enter first: ')), float(input('Enter second: ')), float(input('Enter third: '))]
     print(np.roots(rates))
 equation()
+
+def encode():
+    f = {'A':0, 'B': 1101, 'C' :101, 'D':1100, 'E': 100, 'F' : 111}
+    res = list(input('Stroke: '))
+    fin = []
+    for char in res: 
+        fin.append(f[char])
+    print('|'.join([str(elem) for elem in fin]))
+def decode():
+    f = {'A':0, 'B': 1101, 'C' :101, 'D':1100, 'E': 100, 'F' : 111}
+    f_1 = dict([(value, key) for key, value in f.items()])
+    beg = list(map(int, input('Enter your number using split: ').strip().split()))
+    fin_1 = []
+    for num in beg:
+        fin_1.append(f_1[num])
+    print(''.join(fin_1))
+decode()
