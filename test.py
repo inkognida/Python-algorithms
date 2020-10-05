@@ -91,3 +91,43 @@ def decode():
         fin_1.append(f_1[num])
     print(''.join(fin_1))
 decode()
+
+
+import collections 
+import random
+def first(a,b):
+    print(list(set(a).intersection(b)))
+def second(a):
+    a_result = dict(collections.Counter(a))
+    result = {key:value for key,value in a_result.items() if value > 1}
+    for key,value in result.items():
+        print('Element',key,'Reapeted',value,'times')
+
+def third(a):
+    result = collections.Counter(a)
+    result_1 = list(filter(lambda i: i != 20, a))
+    print(result[20], result_1, sep = '\n')
+
+a = [random.randrange(0,50) for i in range(1000)]
+b = [random.randrange(0,100) for i in range(100)]
+
+
+class Triangle():
+    #spizdil polychaetsa, v syti razberys' chutok pozhe :) 
+    def printPascal(n) : 
+        for line in range(0, n) : 
+            for i in range(0, line + 1) : 
+                print(binomialCoeff(line, i), 
+                    " ", end = "") 
+            print() 
+    def binomialCoeff(n, k) : 
+        res = 1
+        if (k > n - k) : 
+            k = n - k 
+        for i in range(0 , k) : 
+            res = res * (n - i) 
+            res = res // (i + 1)   
+        return res 
+
+Triangle.printPascal(10)
+  
