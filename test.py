@@ -81,7 +81,7 @@ def encode():
     fin = []
     for char in res: 
         fin.append(f[char])
-    print('|'.join([str(elem) for elem in fin]))
+    print(''.join([str(elem) for elem in fin]))
 def decode():
     f = {'A':0, 'B': 1101, 'C' :101, 'D':1100, 'E': 100, 'F' : 111}
     f_1 = dict([(value, key) for key, value in f.items()])
