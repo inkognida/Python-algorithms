@@ -1,2 +1,2 @@
 # School
-Python algorithms 
+Python tasks
