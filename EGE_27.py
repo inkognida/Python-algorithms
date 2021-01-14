@@ -6,4 +6,4 @@ if local_sum % 3 == 0:
     local_sum -= min(diff)
     print(local_sum)
 else: 
-    print(local_sum)
+    print(local_sum) #118951/394491666
