@@ -20,3 +20,21 @@ for pairs in delta:
         result.append((sum(pairs), pairs))
 sorted(result, key = lambda x: x[0], reverse = True)
 
+
+
+with open('FileB_10.txt', 'r+') as f:
+    nums = list(map(int, f.readlines()))[1:]
+nums
+def pairs(num): 
+    a = num
+    for i in range(1, len(nums)):
+        if abs(a - nums[i]) % 2 == 0 and (nums[i] % 11 == 0 or a % 11 == 0): 
+            return((nums[i], a))
+delta = list()
+for num in nums: 
+    if pairs(num) != None:
+        delta.append(pairs(num))
+res = list()
+for pairs in delta: res.append([sum(pairs), pairs])
+sorted_list = sorted(res, key=lambda x: x[0], reverse = True)
+sorted_list
