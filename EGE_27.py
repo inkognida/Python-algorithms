@@ -7,3 +7,16 @@ if local_sum % 5 == 0:
     print(local_sum)
 else: 
     print(local_sum) #118951/394491666
+    
+    
+with open('FileB_10.txt', 'r+') as f:
+    nums = list(map(int, f.readlines()))
+
+import itertools
+delta = [(a, b) for idx, a in enumerate(nums) for b in nums[idx + 1:]]
+result = list()
+for pairs in delta: 
+    if abs(pairs[0] - pairs[1]) % 2 == 0 and (pairs[0] % 11 == 0 or pairs[1] % 11 == 0):
+        result.append((sum(pairs), pairs))
+sorted(result, key = lambda x: x[0], reverse = True)
+
