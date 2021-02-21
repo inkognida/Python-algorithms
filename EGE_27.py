@@ -38,3 +38,16 @@ res = list()
 for pairs in delta: res.append([sum(pairs), pairs])
 sorted_list = sorted(res, key=lambda x: x[0], reverse = True)
 sorted_list
+
+
+
+### Задание с разницой индексов элементов 
+with open('27_A.txt', 'r+') as f:
+    n = int(f.readline())
+    nums = list(map(int, f.readlines()))
+delta = list()
+for i in range(n-4):
+    for j in range(i+4, n):
+        if (nums[i] * nums[j] % 31 == 0):
+            delta.append((nums[i], nums[j]))
+print(len(delta))
