@@ -9,3 +9,6 @@ def sys_base(num, base):
     while remain: 
         new_num.append(digits[remain.pop()])
     return ''.join(new_num)
+
+def reverse_sys_base(num, base): 
+    return int(str(num), base)
