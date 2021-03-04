@@ -26,26 +26,15 @@ else:
     print((len(param) - 1), s.count(param[:-1])) #out: 23 
 
 #2 
-import itertools
-with open('1_A.txt', 'r+') as f:
+with open('24_demo.txt', 'r+') as f:
     s = f.read()
-options = list(itertools.product(['X', 'Y', 'Z'], repeat = 3))
-params = []
-for par in options: 
-    if par[0] != par[1] and par[1] != par[2] and par[0] != par[2]: 
-        params.append(''.join(par))
-
-def len_of_param(param): 
-    symbol = param
-    while param in s: 
-        param += symbol 
-    if param in s: 
-        return len(param)
+local_max = 1
+count = 1
+for ch in range(1, len(s)): 
+    if s[ch] != s[ch - 1]: 
+        count += 1 
     else: 
-        if s.count(param[:-3]):
-            return len(param[:-3])
-max_len = 0
-for cond in params: 
-    if len_of_param(cond) > max_len: 
-        max_len = len_of_param(cond)
-print(max_len) #out: 12
+        if count > local_max: 
+            local_max = count
+        count = 1
+local_max #out: 35
