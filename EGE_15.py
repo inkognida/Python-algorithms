@@ -7,3 +7,18 @@ for A in range(1,100):
             break
     if f == 0: 
         print(A)
+
+# Укажите наибольшее целое значение А, при котором выражение
+# (5y + 7x ≠ 129) ∨ (3x > A) ∨ (4y > A)
+
+def t_f(A):
+    for x in range(1,1000):
+        for y in range(1,1000): 
+            func = ((5*y) + (7*x) != 129) or ((3*x) > A) or ((4*y) > A)
+            if func == False:
+                return 'suck'
+    return ('fine', A)
+
+for A in range(1,100): 
+    if (t_f(A)) != 'suck':
+        pass
