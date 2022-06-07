@@ -40,8 +40,6 @@ sorted_list = sorted(res, key=lambda x: x[0], reverse = True)
 sorted_list
 
 
-
-### Задание с разницой индексов элементов 
 with open('27_A.txt', 'r+') as f:
     n = int(f.readline())
     nums = list(map(int, f.readlines()))

@@ -1,4 +1,3 @@
-#ДЕЛ
 for A in range(1,100): 
     f = 0
     for x in range(1,100): 
@@ -7,9 +6,6 @@ for A in range(1,100):
             break
     if f == 0: 
         print(A)
-
-# Укажите наибольшее целое значение А, при котором выражение
-# (5y + 7x ≠ 129) ∨ (3x > A) ∨ (4y > A)
 
 def t_f(A):
     for x in range(1,1000):
